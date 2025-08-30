@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 import { Alert, StyleSheet } from 'react-native';
-import HomeScreen from '../App';
+import HomeScreen from '../app/index';
 import { useStore } from '../src/store/useStore';
 
 // Mock StyleSheet.flatten for testing library

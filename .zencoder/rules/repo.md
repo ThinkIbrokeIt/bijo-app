@@ -9,8 +9,11 @@ alwaysApply: true
 Bijo (Binary Journal) is a minimalist, local-first mobile application that allows users to log their daily energy levels and visualize the resulting waveform of their emotional patterns. The app follows a philosophy of data ownership, where all user data is stored locally on the device.
 
 ## Structure
+- **app/**: Expo Router application screens and layouts
+  - **index.tsx**: Main home screen
+  - **_layout.tsx**: Root layout configuration
 - **src/**: Core application code
-  - **components/**: UI components
+  - **components/**: UI components (EnergyButton, etc.)
   - **store/**: State management using Zustand
   - **types/**: TypeScript type definitions
   - **utils/**: Utility functions
@@ -20,12 +23,13 @@ Bijo (Binary Journal) is a minimalist, local-first mobile application that allow
 ## Language & Runtime
 **Language**: TypeScript
 **Version**: TypeScript ~5.8.3
-**Framework**: React Native (Expo ~53.0.22)
+**Framework**: React Native (Expo ~53.0.22) with Expo Router
 **Package Manager**: npm
 
 ## Dependencies
 **Main Dependencies**:
 - expo: ~53.0.22
+- expo-router: ~4.0.0
 - react: 19.0.0
 - react-native: 0.79.6
 - react-native-mmkv: ^3.3.0
@@ -59,7 +63,8 @@ npx expo start --web
 ```
 
 ## Application Structure
-**Entry Point**: App.tsx
+**Entry Point**: expo-router/entry (app/index.tsx)
+**Navigation**: Expo Router file-based routing
 **State Management**: Zustand with MMKV storage
 **Data Model**:
 - EnergyLevel: Numeric values (-2 to 2) representing energy levels
