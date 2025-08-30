@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, Alert } from 'react-native';
-import { useStore } from '../src/store/useStore';
-import { EnergyLevel, EveningOutcome } from '../src/types';
+import { useStore } from './src/store/useStore';
+import { EnergyLevel, EveningOutcome } from './src/types';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 // We'll create this component in the next step
